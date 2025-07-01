@@ -8,7 +8,7 @@ function Bars() {
         <div className="flex items-center gap-10">
           <div>
             <p className="text-[64px] leading-0 font-bold">
-              +5 PROJECT COMPLETED{" "}
+              +5 PROJECT COMPLETED
             </p>
           </div>
           <div>

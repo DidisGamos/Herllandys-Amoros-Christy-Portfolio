@@ -73,31 +73,15 @@ function Preloader() {
         />
       </div>
       {/* Contenu principal */}
-      <div className="flex flex-col justify-center items-center gap-10 z-10">
+      <div className="flex flex-col justify-center items-center z-10 gap-10">
         {/* Logo animé */}
         <motion.img
           src={"/src/assets/Logo2.png"}
           alt="logo"
           className="w-[60%] mb-4"
-          initial={{ scale: 0, rotate: -180, opacity: 0 }}
-          animate={{ scale: 1, rotate: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 120,
-            damping: 12,
-            delay: 0.2,
-          }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
         />
-        {/* Texte animé */}
-        {/*<motion.p
-          className="text-white text-lg md:text-lg font-Michroma text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-        >
-          Welcome to my portfolio!
-        </motion.p>*/}
-        {/* Loader points animés */}
         <div className="flex gap-2 mt-4">
           {[0, 1, 2].map((i) => (
             <motion.span
@@ -117,19 +101,6 @@ function Preloader() {
             />
           ))}
         </div>
-        {/* Chevron animé */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-          >
-            <FaChevronCircleDown className="text-white text-5xl mt-6" />
-          </motion.div>
-        </motion.div>
       </div>
     </div>
   );

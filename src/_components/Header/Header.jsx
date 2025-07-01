@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import Buttons from "../_ui/Buttons";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { FaHouse, FaUser, FaServicestack } from "react-icons/fa6";
+import { FaBriefcase } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
 
 function Header() {
   const [isHidden, setIsHidden] = useState(false);
@@ -29,12 +32,9 @@ function Header() {
       items-center gap-[50px] shrink-0 border-[2px] border-[#4d4d4d] rounded-[10px] bg-black"
       >
         <div className="w-[10%]">
-          <img
-            src={"/src/assets/Logo2.png"}
-            alt="logo"
-          />
+          <img src={"/src/assets/Logo2.png"} alt="logo" />
         </div>
-        <div className="flex gap-[50px] cursor-pointer text-[12px]">
+        <div className="md:flex gap-[50px] cursor-pointer text-[12px] sm:hidden">
           <a
             className="hover:text-[#F5B754] transition-all duration-300"
             href="#home"
@@ -64,6 +64,23 @@ function Header() {
             href="#contact"
           >
             CONTACT
+          </a>
+        </div>
+        <div className="lg:hidden sm:flex gap-[50px] text-xl cursor-pointer">
+          <a href="">
+            <FaHouse size={30}/>
+          </a>
+          <a href="">
+            <FaUser size={30}/>
+          </a>
+          <a href="">
+            <FaServicestack size={30}/>
+          </a>
+          <a href="">
+            <FaBriefcase size={30}/>
+          </a>
+          <a href="">
+            <MdLocationOn size={30}/>
           </a>
         </div>
         <div>
