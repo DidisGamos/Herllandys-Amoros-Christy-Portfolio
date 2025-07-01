@@ -78,7 +78,7 @@ function Preloader() {
         <motion.img
           src={"/src/assets/Logo2.png"}
           alt="logo"
-          className="w-[50%] mb-4"
+          className="w-[60%] mb-4"
           initial={{ scale: 0, rotate: -180, opacity: 0 }}
           animate={{ scale: 1, rotate: 0, opacity: 1 }}
           transition={{
@@ -89,14 +89,14 @@ function Preloader() {
           }}
         />
         {/* Texte animé */}
-        <motion.p
-          className="text-white text-3xl md:text-5xl font-Michroma text-center"
+        {/*<motion.p
+          className="text-white text-lg md:text-lg font-Michroma text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           Welcome to my portfolio!
-        </motion.p>
+        </motion.p>*/}
         {/* Loader points animés */}
         <div className="flex gap-2 mt-4">
           {[0, 1, 2].map((i) => (

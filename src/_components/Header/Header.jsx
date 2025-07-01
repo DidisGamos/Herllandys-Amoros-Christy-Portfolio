@@ -17,10 +17,10 @@ function Header() {
 
   return (
     <motion.div
-      animate={isHidden ? "hiddedn" : "visible"}
+      animate={isHidden ? "hidden" : "visible"}
       whileHover="visible"
       onFocusCapture={() => setIsHidden(false)}
-      variants={{ hidden: { y: "-100%" }, visible: { x: "0%" } }}
+      variants={{ hidden: { y: "-200%" }, visible: { x: "0%" } }}
       transition={{ duration: 0.2 }}
       className="fixed w-[1290px] z-10 flex justify-center"
     >
