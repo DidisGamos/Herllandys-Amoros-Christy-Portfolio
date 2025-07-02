@@ -21,10 +21,10 @@ function Hero2() {
         <img
           src={HeroPic}
           alt="hero"
-          className="absolute bottom-0 lg:left-[533.21px]"
+          className="absolute bottom-0 max-md:left-[80px] lg:left-[533.21px] max-md:w-[60%]"
         />
       </div>
-      <div className="p-[31px] w-[290px] lg:w-[331px] lg:h-[153.353px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[60px] lg:top-[190.84px] right-5 lg:right-[122px]">
+      <div className="p-[31px] w-[290px] lg:w-[331px] lg:h-[153.353px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[60px] lg:top-[190.84px] right-5 max-md:left-[50px] lg:right-[122px]">
         <div className="flex justify-between">
           <div className="flex flex-col gap-[10px] text-white w-[280px]">
             <p className="text-[20px] font-bold leading-none">Let's Talk</p>

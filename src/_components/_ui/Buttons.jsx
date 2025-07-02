@@ -3,7 +3,7 @@ import React from 'react'
 function Buttons() {
   return (
     <div>
-      <button className="flex justify-center items-center gap-[10px] w-[127px] h-[40px] shrink-0 rounded-[50px] text-black text-[13px] font-semibold bg-[#F5B754]">
+      <button className="flex justify-center items-center gap-[10px] w-[127px] h-[40px] shrink-0 rounded-[50px] text-black text-[13px] font-semibold bg-[#F5B754] max-md:w-[100px] max-md:h-[30px] max-md:text-[10px]">
         Let's Talk{" "}
         <label htmlFor="">
           <svg

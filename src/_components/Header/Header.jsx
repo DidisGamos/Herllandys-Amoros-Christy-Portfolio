@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react";
 import Buttons from "../_ui/Buttons";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { FaHouse, FaUser, FaServicestack } from "react-icons/fa6";
-import { FaBriefcase } from "react-icons/fa";
-import { MdLocationOn } from "react-icons/md";
+import { FiBriefcase, FiHome, FiUser } from "react-icons/fi";
 
 function Header() {
   const [isHidden, setIsHidden] = useState(false);
@@ -29,11 +27,11 @@ function Header() {
     >
       <nav
         className="w-full max-w-7xl h-16 md:h-[68px] text-white flex justify-around 
-      items-center gap-[50px] shrink-0 border-[2px] border-[#4d4d4d] rounded-[10px] bg-black"
+      items-center gap-[20px] lg:gap-[50px] shrink-0 border-[2px] border-[#4d4d4d] rounded-[10px] bg-black"
       >
         <div className="w-[10%]">
           <img src={"/src/assets/Logo2.png"} className="hidden lg:block" alt="logo" />
-          <img src={"/src/assets/Logo3.png"} className="w-[45%] lg:hidden" alt="logo" />
+          <img src={"/src/assets/Logo3.png"} className="w-[45%] max-md:w-[100%] lg:hidden" alt="logo" />
         </div>
         <div className="hidden lg:flex gap-[50px] text-[12px] sm:hidden">
           <a
@@ -67,21 +65,15 @@ function Header() {
             CONTACT
           </a>
         </div>
-        <div className="flex lg:hidden items-center sm:gap-[30px] gap-[50px] text-xl">
+        <div className="flex lg:hidden items-center gap-[20px] text-xl">
           <a href="">
-            <FaHouse size={30} />
+            <FiHome size={20} />
           </a>
           <a href="">
-            <FaUser size={30} />
+            <FiUser size={20} />
           </a>
           <a href="">
-            <FaServicestack size={30} />
-          </a>
-          <a href="">
-            <FaBriefcase size={30} />
-          </a>
-          <a href="">
-            <MdLocationOn size={30} />
+            <FiBriefcase size={20} />
           </a>
         </div>
         <div>

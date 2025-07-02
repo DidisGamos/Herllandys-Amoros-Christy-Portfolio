@@ -1,6 +1,7 @@
 import React from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+
 // Fusée SVG composant
 const Rocket = ({ className, style, animate, transition }) => (
   <motion.svg
@@ -72,20 +73,20 @@ function Preloader() {
         />
       </div>
       {/* Contenu principal */}
-      <div className="flex flex-col justify-center items-center z-10 gap-10">
+      <div className="flex flex-col justify-center items-center z-10 gap-[5px]">
         {/* Logo animé */}
         <motion.img
           src={"/src/assets/Logo2.png"}
           alt="logo"
-          className="w-[60%] mb-4"
+          className="w-[50%] mb-4"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
         />
-        <div className="flex gap-2 mt-4">
+        <div className="flex gap-2 mt-[5px]">
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
-              className="block w-3 h-3 rounded-full bg-[#F5B754]"
+              className="block w-2 h-2 rounded-full bg-[#F5B754]"
               initial={{ y: 0, opacity: 0.5 }}
               animate={{
                 y: [0, -10, 0],
