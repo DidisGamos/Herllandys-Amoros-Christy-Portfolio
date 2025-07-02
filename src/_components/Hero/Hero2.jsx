@@ -4,8 +4,8 @@ import { FaPlus } from "react-icons/fa";
 
 function Hero2() {
   return (
-    <div className='relative bg-[url("/src/assets/Hero_BG.png")] bg-cover bg-center bg-no-repeat h-[587px] px-[120px] py-[50px]'>
-      <div className="p-[31px] text-white w-[331px] h-[136.314px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[335.27px] left-[122px]">
+    <div className='relative bg-[url("/src/assets/Hero_BG.png")] bg-cover bg-center bg-no-repeat h-[587px] px-[120px] py-[10px] lg:py-[50px]'>
+      <div className="hidden lg:block p-[31px] text-white w-[331px] h-[136.314px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[335.27px] left-[122px]">
         <div className="flex mt-10 items-center justify-between">
           <div>
             <p className="text-[20px] font-bold leading-none">Latest Project</p>
@@ -21,10 +21,10 @@ function Hero2() {
         <img
           src={HeroPic}
           alt="hero"
-          className="absolute bottom-0 left-[533.21px]"
+          className="absolute bottom-0 lg:left-[533.21px]"
         />
       </div>
-      <div className="p-[31px] w-[331px] h-[153.353px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[190.84px] right-[122px]">
+      <div className="p-[31px] w-[290px] lg:w-[331px] lg:h-[153.353px] bg-[#212121] border-[2px] border-[#4d4d4d] rounded-[10px] absolute top-[60px] lg:top-[190.84px] right-5 lg:right-[122px]">
         <div className="flex justify-between">
           <div className="flex flex-col gap-[10px] text-white w-[280px]">
             <p className="text-[20px] font-bold leading-none">Let's Talk</p>

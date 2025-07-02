@@ -1,7 +1,6 @@
 import React from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
-import { motion } from "framer-motion";
-
+import { motion } from "framer-motion"
 // Fusée SVG composant
 const Rocket = ({ className, style, animate, transition }) => (
   <motion.svg

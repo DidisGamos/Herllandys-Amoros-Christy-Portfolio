@@ -28,8 +28,8 @@ function Hero() {
                   <a key={index}>{social.icon}</a>
               ))}
           </div> */}
-      <div className="relative">
-        <div className="absolute flex flex-col gap-[25px] top-[123.9px]">
+      <div className="hidden lg:block relative">
+        <div className="absolute flex lg:flex-col gap-[25px] top-[120px] lg:top-[123.9px]">
           {Call.map((social, index) => (
             <a
               key={index}
@@ -58,7 +58,7 @@ function Hero() {
 
       {/* Scquare_Cube */}
 
-      <div className="absolute left-[163.85px] mt-[32.49px]">
+      <div className="absolute left-[78px] lg:left-[163.85px] mt-[22px] lg:mt-[32.49px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="60.297"
@@ -80,14 +80,14 @@ function Hero() {
       </div>
 
       {/* Names */}
-      <div className="text-white">
-        <p className="ml-[251px] text-[90px] font-bold leading-normal">
+      <div className="text-white flex flex-col"> 
+        <p className="ml-[150px] lg:ml-[251px] text-[60px] lg:text-[90px] font-bold leading-normal">
           HELLO THERE
         </p>
-        <p className="ml-[88px] text-[90px] font-bold leading-normal">
+        <p className="ml-0 lg:ml-[88px] text-[60px] lg:text-[90px] font-bold leading-normal">
           I AM HERLLANDYS
         </p>
-        <p className="ml-[88px] text-[90px] font-bold leading-normal">
+        <p className="ml-0 lg:ml-[88px] text-[55px] lg:text-[90px] font-bold leading-normal">
           {text}
           <span>
             <Cursor cursorStyle="|" />
@@ -95,7 +95,7 @@ function Hero() {
         </p>
 
         {/* Small Info */}
-        <div className="absolute top-[250px] left-[850px] text-white">
+        <div className="absolute hidden lg:block top-[250px] lg:left-[850px] text-white">
           <p className="font-Michroma w-[290px] shrink-0 text-[14px] font-normal leading-normal">
             A passionate frontend developer with a talent for turning ideas into
             interactive and visually engaging experiences.
