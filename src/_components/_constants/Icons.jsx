@@ -1,18 +1,13 @@
-import { FaFacebook, FaGit, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
 import { FiFacebook, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { MdEmail, MdPhone } from "react-icons/md";
 
 export const Call = [
   {
     id: 1,
-    icon: <MdEmail size={29.333} className="max-md:w-[25px] max-md:h-[25px]" />,
-    name: "Email",
+    name: "herllandysamoroschristy@gmail.com",
   },
   {
     id: 2,
-    icon: <MdPhone size={29.333} className="max-md:w-[25px] max-md:h-[25px]" />,
-    name: "Phone",
+    name: "(+261) 34 97 487 75",
   },
 ];
 
@@ -34,6 +29,6 @@ export const Socials = [
   },
   {
     id: 4,
-    icon: <FiLinkedin size={29.333} className="max-md:w-[25px] max-md:h-[25px]" />,
+      icon: <FiLinkedin size={29.333} className="max-md:w-[25px] max-md:h-[25px]" />,
   },
 ];

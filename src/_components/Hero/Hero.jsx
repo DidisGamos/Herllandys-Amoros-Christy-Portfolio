@@ -1,18 +1,10 @@
-import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import React, { useEffect, useRef } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Call } from "../_constants/Icons";
 import { Socials } from "../_constants/Icons";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 function Hero() {
-  // const sociallinks = [
-  //   {
-  //     icon: <fafacebook size={40} />,
-  //     name: "facebook"
-  //   },
-  //   { icon: <fainstagram size={40} />, name: "instagram" },
-  // ];
-
   const [text] = useTypewriter({
     words: ["FRONTEND DEVELOPPER", "UI/UX DESIGNER"],
     loop: 0,
@@ -21,14 +13,19 @@ function Hero() {
     delaySpeed: 1000,
   });
 
-  return (
-    <div className="pt-[103px] relative">
-      {/* <div classname="flex space-x-4">
-              {sociallinks.map((social, index) => (
-                  <a key={index}>{social.icon}</a>
-              ))}
-          </div> */}
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+        slideControls.start("visible");
+    }
+  }, [isInView]);
 
+  return (
+    <div ref={ref} className="pt-[103px] relative">
       {/* Scquare_Cube */}
 
       <div className="absolute left-[78px] max-md:left-0 lg:left-[163.85px] mt-[22px] max-md:mt-[15px] lg:mt-[32.49px]">
@@ -54,21 +51,18 @@ function Hero() {
       </div>
 
       {/* Names */}
-      <div className="text-white flex flex-col max-md:mb-[60px]">
+      <div className="text-white flex flex-col">
         <div className="hidden max-md:block lg:block relative">
-          <div className="absolute flex max-md:hidden lg:flex-col gap-[25px] top-[120px] lg:top-[123.9px]">
+          <div className="absolute flex max-md:hidden lg:flex gap-5 left-0 top-[140px] rotate-90">
             {Call.map((social, index) => (
-              <a
-                key={index}
-                href="#"
-                className="block mb-2 text-white bg-transparent border-2 p-[10px] rounded-full hover:text-[#F5B754] hover:scale-110 hover:border-[#F5B754]
-            transition-all duration-300"
-              >
-                {social.icon}
-              </a>
+              <p key={index} href="#" className="text-white bg-transparent">
+                {social.name}
+              </p>
             ))}
           </div>
+        </div>
 
+        <div className="hidden max-md:hidden lg:block relative">
           <div className="absolute flex lg:flex-col gap-[25px] max-md:left-[50px] max-md:top-[200px] max-md:mb-[50px] lg:top-[58.64px] lg:right-0">
             {Socials.map((social, index) => (
               <a
@@ -84,20 +78,27 @@ function Hero() {
         </div>
 
         {/* Names For My Presentation */}
-
-        <p className="ml-[150px] max-md:ml-[60px] lg:ml-[251px] text-[60px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
-          HELLO THERE
-        </p>
-        <p className="ml-0 lg:ml-[88px] text-[60px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
-          I AM HERLLANDYS
-        </p>
-        <p className="ml-0 lg:ml-[88px] text-[55px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
-          {text}
-          <span>
-            <Cursor cursorStyle="|" />
-          </span>
-        </p>
-
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay:0.25}}>
+          <p className="ml-[150px] max-md:ml-[60px] lg:ml-[251px] text-[60px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
+            HELLO THERE
+          </p>
+          <p className="ml-0 lg:ml-[88px] text-[60px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
+            I AM HERLLANDYS
+          </p>
+          <p className="ml-0 lg:ml-[88px] text-[55px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
+            {text}
+            <span>
+              <Cursor cursorStyle="|" />
+            </span>
+          </p>
+        </motion.div>
         {/* Small Info */}
         <div className="absolute hidden lg:block top-[250px] lg:left-[850px] text-white">
           <p className="font-Michroma w-[290px] shrink-0 text-[14px] font-normal leading-normal">
