@@ -1,6 +1,7 @@
 import React from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
+import LogoAB from "../../assets/Logo2.png";
 
 // Fusée SVG composant
 const Rocket = ({ className, style, animate, transition }) => (
@@ -78,7 +79,7 @@ function Preloader() {
         <motion.img
           src={"/src/assets/Logo2.png"}
           alt="logo"
-          className="w-[50%] mb-4"
+          className="w-[50%] max-md:w-[45%] mb-4"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
         />
