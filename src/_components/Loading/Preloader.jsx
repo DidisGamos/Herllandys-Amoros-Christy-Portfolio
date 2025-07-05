@@ -77,7 +77,7 @@ function Preloader() {
       <div className="flex flex-col justify-center items-center z-10 gap-[5px]">
         {/* Logo animé */}
         <motion.img
-          src={"/src/assets/Logo2.png"}
+          src={LogoAB}
           alt="logo"
           className="w-[50%] max-md:w-[45%] mb-4"
           animate={{ y: [0, 10, 0] }}

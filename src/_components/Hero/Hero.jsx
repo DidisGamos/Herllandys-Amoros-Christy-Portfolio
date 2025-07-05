@@ -3,6 +3,8 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Call } from "../_constants/Icons";
 import { Socials } from "../_constants/Icons";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Buttons from "../_ui/Buttons";
+import { FiDownload } from "react-icons/fi";
 
 function Hero() {
   const [text] = useTypewriter({
@@ -98,6 +100,7 @@ function Hero() {
               <Cursor cursorStyle="|" />
             </span>
           </p>
+          <Buttons width="140px" height="40px" fontSize="13.5px" gap="10px">{ "Download CV"}<label><FiDownload/></label></Buttons>
         </motion.div>
         {/* Small Info */}
         <div className="absolute hidden lg:block top-[250px] lg:left-[850px] text-white">
