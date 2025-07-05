@@ -3,6 +3,7 @@ import Header from "./_components/Header/Header";
 import Hero from "./_components/Hero/Hero";
 import Hero2 from "./_components/Hero/Hero2";
 import Bars from "./_components/_ui/Bars";
+import Skills from "./_components/Skills/Skills";
 
 export default function AllPage() {
   return (
@@ -13,6 +14,9 @@ export default function AllPage() {
       </div>
       <Hero2 />
       <Bars />
+      <div className="px-[30px] max-md:px-[20px] lg:px-[120px] py-[105px]">
+        <Skills />
+      </div>
     </div>
   );
 }

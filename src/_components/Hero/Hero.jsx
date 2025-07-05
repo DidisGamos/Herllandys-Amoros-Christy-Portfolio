@@ -64,11 +64,11 @@ function Hero() {
       </div>
 
       {/* Names */}
-      <div className="text-white flex flex-col">
-        <div className="hidden max-md:block lg:block relative">
-          <div className="absolute flex max-md:hidden lg:flex gap-5 left-0 top-[140px] rotate-90">
+      <div className="text-white">
+        <div className="hidden max-md:block lg:block relative ">
+          <div className="absolute max-md:hidden max-md:top-0 top-[140px] max-md:flex-col flex max-md:gap-2 gap-5 max-md:rotate-0 rotate-90 max-md:left-0 left-[-191px]">
             {Call.map((social, index) => (
-              <p key={index} href="#" className="text-white bg-transparent">
+              <p key={index} href="#" className="text-white text-[14px]">
                 {social.name}
               </p>
             ))}
