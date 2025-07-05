@@ -5,6 +5,7 @@ import { Socials } from "../_constants/Icons";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Buttons from "../_ui/Buttons";
 import { FiDownload } from "react-icons/fi";
+import CV from "../../assets/_files/CV_Herllandys.pdf";
 
 function Hero() {
   const [text] = useTypewriter({
@@ -19,12 +20,22 @@ function Hero() {
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
   const slideControls = useAnimation();
+
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
-        slideControls.start("visible");
+      slideControls.start("visible");
     }
   }, [isInView]);
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = CV;
+    link.download = "CV_Herllandys.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div ref={ref} className="pt-[103px] relative">
@@ -87,7 +98,8 @@ function Hero() {
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, delay:0.25}}>
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
           <p className="ml-[150px] max-md:ml-[60px] lg:ml-[251px] text-[60px] max-md:text-[40px] lg:text-[90px] font-bold leading-normal">
             HELLO THERE
           </p>
@@ -100,7 +112,13 @@ function Hero() {
               <Cursor cursorStyle="|" />
             </span>
           </p>
-          <Buttons width="140px" height="40px" fontSize="13.5px" gap="10px">{ "Download CV"}<label><FiDownload/></label></Buttons>
+          <button
+            onClick={handleDownloadCV}
+            className="flex justify-center items-center gap-[10px] w-[140px] h-[40px] shrink-0 rounded-[50px] text-black text-[13.5px] font-semibold bg-[#F5B754] max-md:w-[100px] max-md:h-[30px] max-md:text-[10px]"
+          >
+            {"Download CV"}
+            <FiDownload />
+          </button>
         </motion.div>
         {/* Small Info */}
         <div className="absolute hidden lg:block top-[250px] lg:left-[850px] text-white">
