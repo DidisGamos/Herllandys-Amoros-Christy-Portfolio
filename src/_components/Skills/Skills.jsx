@@ -18,7 +18,7 @@ function Skills() {
           </p>
         </div>
       </div>
-
+      <hr className="w-full h-[1px] bg-[#4d4d4d] mt-[100px] max-md:mt-[50px]" />
       <div>
         <div></div>
       </div>

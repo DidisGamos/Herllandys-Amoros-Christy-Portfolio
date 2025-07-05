@@ -83,23 +83,31 @@ function Header() {
           </a>
         </div>
         <div>
-          <Buttons width="140px" height="40px" fontSize="13.5px" gap="10px" rounded="50px">
-            {"Lets Talks"}
-            <label htmlFor="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-              >
-                <path
-                  d="M4.24745 17.3625L18.0058 11.2267C19.1091 10.735 19.1091 9.265 18.0058 8.77333L4.24745 2.63666C3.00162 2.08083 1.70829 3.315 2.32579 4.47166L4.95245 9.39166C5.15662 9.77416 5.15662 10.225 4.95245 10.6067L2.32579 15.5267C1.70912 16.6833 3.00079 17.9192 4.24745 17.3625Z"
-                  fill="black"
-                />
-              </svg>
-            </label>
-          </Buttons>
+          <a href="">
+            <Buttons
+              width="140px"
+              height="40px"
+              fontSize="13.5px"
+              gap="10px"
+              rounded="50px"
+            >
+              {"Lets Talks"}
+              <label htmlFor="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <path
+                    d="M4.24745 17.3625L18.0058 11.2267C19.1091 10.735 19.1091 9.265 18.0058 8.77333L4.24745 2.63666C3.00162 2.08083 1.70829 3.315 2.32579 4.47166L4.95245 9.39166C5.15662 9.77416 5.15662 10.225 4.95245 10.6067L2.32579 15.5267C1.70912 16.6833 3.00079 17.9192 4.24745 17.3625Z"
+                    fill="black"
+                  />
+                </svg>
+              </label>
+            </Buttons>
+          </a>
         </div>
       </nav>
     </motion.div>

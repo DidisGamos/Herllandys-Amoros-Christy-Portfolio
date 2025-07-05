@@ -14,7 +14,7 @@ export default function AllPage() {
       </div>
       <Hero2 />
       <Bars />
-      <div className="px-[30px] max-md:px-[20px] lg:px-[120px] py-[105px]">
+      <div className="px-[30px] max-md:px-[20px] max-md:py-[50px] lg:px-[120px] py-[105px]">
         <Skills />
       </div>
     </div>
