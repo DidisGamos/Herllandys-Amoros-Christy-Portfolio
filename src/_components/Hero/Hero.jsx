@@ -112,13 +112,16 @@ function Hero() {
               <Cursor cursorStyle="|" />
             </span>
           </p>
-          <button
+          <Buttons
             onClick={handleDownloadCV}
-            className="flex justify-center items-center gap-[10px] w-[140px] h-[40px] shrink-0 rounded-[50px] text-black text-[13.5px] font-semibold bg-[#F5B754] max-md:w-[100px] max-md:h-[30px] max-md:text-[10px]"
+            width="140px"
+            height="40px"
+            fontSize="14px"
+            gap="10px"
           >
             {"Download CV"}
             <FiDownload />
-          </button>
+          </Buttons>
         </motion.div>
         {/* Small Info */}
         <div className="absolute hidden lg:block top-[250px] lg:left-[850px] text-white">
