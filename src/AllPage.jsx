@@ -4,6 +4,7 @@ import Hero from "./_components/Hero/Hero";
 import Hero2 from "./_components/Hero/Hero2";
 import Bars from "./_components/_ui/Bars";
 import Skills from "./_components/Skills/Skills";
+import Services from "./_components/Services/Services";
 
 export default function AllPage() {
   return (
@@ -17,6 +18,7 @@ export default function AllPage() {
       <div className="px-[30px] max-md:px-[20px] max-md:py-[50px] lg:px-[120px] py-[105px]">
         <Skills />
       </div>
+      <Services />
     </div>
   );
 }
