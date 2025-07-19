@@ -22,19 +22,19 @@ export const education = [
 export const experience = [
   {
     id: 1,
-    year: "2024 - 2025",
-    techno: "Java Developer",
+    year: "2024 - Present",
+    techno: "JAVA / PHP Developer",
     school: "ENI - Madagascar",
   },
   {
     id: 2,
-    year: "2024 - 2025",
-    techno: "PHP Developer",
+    year: "2024 - Present",
+    techno: "UI/UX Designer",
     school: "ENI - Madagascar",
   },
   {
     id: 3,
-    year: "2023 - 2024",
+    year: "2023 - Present",
     techno: "HTML - CSS - JavaScript - React",
     school: "ENI - Madagascar",
   },
